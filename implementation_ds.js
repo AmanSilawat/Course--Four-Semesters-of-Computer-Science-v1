@@ -1,3 +1,6 @@
+// IMPEMENTATION PRACTICE CODE
+// ArrayList, LinkedList, binarySearch, avl
+
 /*
 ArrayList: ============================
 Arraylist class implements List interface and it is based on an Array data structure. It is widely used because of the functionality and flexibility it offers. Most of the developers choose Arraylist over Array as it’s a very good alternative of traditional java arrays. ArrayList is a resizable-array implementation of the List interface. It implements all optional list operations, and permits all elements, including null.
