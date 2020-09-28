@@ -211,3 +211,185 @@ Queue Interface
 - add/push : enqueue
 - remove/pop : dequeue
 */
+
+// ..
+// ....
+// .......
+/*
+
+*Data Structure Impementing *
+*ArrayList*
+- two types of implementations of array
+    - ArrayList
+    - LinkedList (terms we're borrowing from Java.))
+
+- js is garbage-collected language to easly to allocation and de-allocation.
+- ArrayList is done by directly interacting with an allocated piece of memory.
+
+- when deleting items from an ArrayList:
+    - you have to collapse the list down to the spot where you deleted.
+
+[a,b,c,d,e,f,g]
+-> delete index 3
+-> array is [a,b,c,(blank),e,f,g]
+-> shift elements 4,5,6 back one index
+-> array is [a,b,c,e,f,g]
+-> decrement length
+^^^^^^^^^^^^^^^^^^^
+
+
+*LinkedList*
+- this is a second way to impelemention.
+- LinkedList is made of a bunch of nodes that point to the next one in the list.
+
+in list : have two properties
+    *value*: store data
+    *pointer*: pointer to the next node in the list.
+
+in list first item is *head*
+in list last item is *tail*
+
+(get element data)
+get third index element to
+    * to pass on--till head to third index element*
+
+(delete third index element)
+    * change pointer to next element*
+
+(push)
+    *add in last element*
+
+(pop)
+    little hard
+    *add in last element*
+
+(null)
+    *last element storing null (no more element to point )*
+
+*/
+
+// ..
+// ....
+// .......
+// * Binary Search Tree (BTS)*
+/*
+
+- BTS is not a list.
+- no duplicates
+
+In a Binary Search Tree (BST), all keys in left subtree of a key must be smaller and all keys in right subtree must be greater. So a Binary Search Tree by definition has distinct keys and duplicates in binary search tree are not allowed.
+
+
+
+*/
+
+// ..
+// ....
+// .......
+// * Adelson Velsky Evgenii Landis (AVL)*
+/*
+*https://medium.com/@randerson112358/avl-trees-a7b4f1fa2d1a*
+
+An AVL Tree is a self balancing binary search tree (BST). It is named after Adelson-Velsky and Landis, the inventors of the AVL tree. The height of an AVL sub-tree can differ at most by 1. This allows us to search for an element in the AVL tree in log base 2 n time or O(log n), where n is the number of elements in the tree. As a matter of fact this allows for operations such as max, min, insertion, and deletion to all be O( log n).
+
+AVL Tree Insertion
+
+When inserting values into the AVL tree, the tree may become unbalanced, we can check if it is balanced or not by using the balance factor to make sure the height of the sub-tree doesn’t differ by more than 1.
+
+BalanceFactor(N) = Height(RightSubtree(N) ) — Height(LeftSubtree(N))
+or
+BalanceFactor(N) = Height(LeftSubtree(N)) — Height(RightSubtree(N) )
+BalanceFactor(N) belongs to the set {-1,0,1}
+
+
+
+* Rotations in AVL Trees*
+*1. Single rotations — Left (LL) Rotation and Right (RR) Rotation*
+
+*https://towardsdatascience.com/self-balancing-binary-search-trees-101-fc4f51199e1d*
+
+|--------------------------------------------
+|1 STEP
+|
+|5 - node A
+| \
+|  8 - node B
+|   \
+|    9 - node C
+|^^^^^^^^^^^^^^^
+|
+|(on the way up from the recursion)
+|-> check balance of node C: left height is 0, right height is 0, balanced
+|-> check balance of node B: left height is 0, right height is 1, balanced
+|-> check balance of node A: left height is 0, right height is 2
+|  unbalanced, right heavy, child is right heavy
+|--------------------------------------------
+
+
+--------------------------------------------
+|2 STEP
+|
+|8 - node A
+|/     \
+|5        9
+|node B   node C
+|
+|
+|-> perform right rotation
+|-> swap the values of nodes A and B
+|-> make node B the left child of node A
+|-> make node C the right child of node A
+|-> move node B's right child to its left child
+|(in this case they're both null)
+|-> make node A's _original_ left child
+|(which was null in this case) the left child of node B
+|-> update the heights of all the nodes involved
+|--------------------------------------------
+
+
+*2. Double rotations — Left Right (LR) Rotation and Right Left (RL) Rotation*
+|--------------------------------------------
+|1 STEP
+|
+|5 - node A
+| \
+|  8 - node B
+| /
+|7 - node C
+|
+|
+|Do Right rotation about node 8
+|--------------------------------------------
+
+
+
+
+|--------------------------------------------
+|2 STEP
+|
+|5 - node A
+| \
+|  8 - node B
+|   \
+|    7 - node C
+|
+|
+|Do Left rotation about node 5
+|--------------------------------------------
+
+
+
+|--------------------------------------------
+|3 STEP
+|
+|     8 - node A
+|  /    \
+| 5       9
+|node B   node C
+|
+|
+|The tree is balaced
+|--------------------------------------------
+
+
+*/
