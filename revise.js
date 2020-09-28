@@ -115,7 +115,6 @@ Space Complexity
 // ....
 // .......
 //  *quick sort *
-var iterator = 0;
 function quickSort(arr) {
     //base case
     if (arr.length < 2) {
@@ -131,7 +130,6 @@ function quickSort(arr) {
 
     // make for loop and skip last element
     for (let i = 0; i < arr.length - 1; i++) {
-        iterator++;
         // if true than push array of i to left array
         if (arr[i] < pivot) {
             left.push(arr[i]);
@@ -144,8 +142,6 @@ function quickSort(arr) {
 
 var arr = [5, 4, 3, 2, 1];
 quickSort(arr); //[1, 2, 3, 4, 5]
-console.log(iterator);
-
 
 /*
 Time Complexity:
@@ -155,3 +151,63 @@ Time Complexity:
 
 Space Complexity
     Worst: O(log(n)) */
+
+// ..
+// ....
+// .......
+/*
+
+*Data Structure Interfaces *
+
+two part of the Data Structure
+1. Interfaces Data Structure : I know how to intract with.
+2. Implementing Data Structure: I have no idea how it work.
+
+
+Set Interface
+- set is not accept duplicats
+- add, remove, maintain
+- not a specific order
+*/
+let mySet = new Set();
+
+mySet.add(1); // Set [ 1 ]
+mySet.add(5); // Set [ 1, 5 ]
+console.log(mySet);
+
+/*
+Map Interface
+- key value pair
+- set and get value
+*/
+
+let myMap = new Map();
+
+let keyString = 'a string';
+let keyObj = {};
+let keyFunc = function () {};
+
+// setting the values
+myMap.set(keyString, "value associated with 'a string'");
+myMap.set(keyObj, 'value associated with keyObj');
+myMap.set(keyFunc, 'value associated with keyFunc');
+console.log(myMap);
+//output:
+// Map(3) {
+//     "a string" => "value associated with 'a string'",
+//     {…} => "value associated with keyObj",
+//     ƒ => "value associated with keyFunc"
+// }
+
+/*
+Stack Interface
+- use last in first out stack terminology
+- stack work only push and pop 
+*/
+
+/*
+Queue Interface
+- use first in first out terminology
+- add/push : enqueue
+- remove/pop : dequeue
+*/
