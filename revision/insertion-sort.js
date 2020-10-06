@@ -11,3 +11,12 @@ for (let i = 1; i < array.length; i++) {
 }
 console.log(array);
 console.log(x); //10
+
+
+//?Insertion Sort Time complexity
+// best case linear
+// averge case quadratic
+// worth case quadratic
+
+//?Insertion Sort Space complexity
+//constant
