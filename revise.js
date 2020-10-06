@@ -393,3 +393,32 @@ BalanceFactor(N) belongs to the set {-1,0,1}
 
 
 */
+
+// ..
+// ....
+// .......
+// *Hash Table*
+/*
+
+Hasing is a searching technic.
+Depend on key value pair
+Hash table Time Complexity
+    searching: constant
+    insertion: constant
+    deletion: constant
+Hashing is a randamising scheme (not any relation ship between key and address)
+
+plainText (key) > hash function > hashed text (index/address) > value
+
+?Properties of a "Good" Hash function
+-fast to complete
+-uniform distribuctions of data (every value difference key:COLLISION)
+
+?Popular Hash function(Genrate: key value paire)
+-mod funcion
+-multiplication method 
+-mid-squre method
+-folding method
+
+
+*/
